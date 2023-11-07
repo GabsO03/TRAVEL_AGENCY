@@ -16,23 +16,23 @@ public class AgenciaViajes {
             opcionprograma = escaner.nextInt();
             switch (opcionprograma) {
                 case 1: {  //Introduce el código aqui Jesus.
-                    System.out.println("ingrese los gastos de los viajeros si no tienen gastos ingresear un -1");
-                    System.out.println("gastos del primero viajero");
+                    System.out.println("Ingrese los gastos de los viajeros (si no tienen gastos ingresear un -1)");
+                    System.out.println("Gastos del primero viajero.");
                     gastosViajeros = 5;
                     int viajero = escaner.nextInt();
-                    System.out.println("gastos del segundo viajero");
+                    System.out.println("Gastos del segundo viajero.");
                     int viajero2 = escaner.nextInt();
                     if (viajero2 == -1) gastosViajeros = gastosViajeros - 1;
-                    System.out.println("gastos del tercer viajero");
+                    System.out.println("Gastos del tercer viajero.");
                     int viajero3 = escaner.nextInt();
                     if (viajero3 == -1) gastosViajeros = gastosViajeros - 1;
-                    System.out.println("gastos del cuarto viajero");
+                    System.out.println("Gastos del cuarto viajero");
                     int viajero4 = escaner.nextInt();
                     if (viajero4 == -1) gastosViajeros = gastosViajeros - 1;
-                    System.out.println("gastos del quinto viajero");
+                    System.out.println("Gastos del quinto viajero.");
                     int viajero5 = escaner.nextInt();
                     if (viajero5 == -1) gastosViajeros = gastosViajeros - 1;
-                    if (gastosViajeros == 1) System.out.println("debes de introducir mas viajeros");
+                    if (gastosViajeros == 1) System.out.println("Debes de introducir más viajeros.");
                     opcionuno = true;
                     break;
                 }
