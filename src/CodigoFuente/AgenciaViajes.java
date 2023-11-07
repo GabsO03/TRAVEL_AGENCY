@@ -48,7 +48,7 @@ public class AgenciaViajes {
 
                 }
             }
-        }while(opcionprograma>3);
+        }while(opcionprograma==1);
     }
 }
 
