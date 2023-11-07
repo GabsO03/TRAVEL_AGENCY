@@ -17,6 +17,7 @@ public class AgenciaViajes {
             switch (opcionprograma) {
                 case 1: {  //Introduce el código aqui Jesus.
                     System.out.println("Ingrese los gastos de los viajeros (si no tienen gastos ingresear un -1)");
+                    System.out.println();
                     System.out.println("Gastos del primer viajero.");
                     numeroViajeros =5;
                     int viajero = escaner.nextInt();
