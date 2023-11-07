@@ -2,7 +2,7 @@ package CodigoFuente;
 
 import java.util.Scanner;
 
-public class pruebas {
+public class AgenciaViajes {
     public static void main(String[] args) {
         Scanner escaner = new Scanner(System.in);
         int opcion;
@@ -40,3 +40,4 @@ public class pruebas {
         }while (viajeros == 1) ;
     }
 }
+
