@@ -9,7 +9,7 @@ public class AgenciaViajes {
         float gastosViajeros = 0, gastoTotal = 0, reparto = 0; //Variables para Gabi
         boolean opcionuno = false;  //booleanas para avisar que los pasos se han cumplido.
         do {
-            System.out.println("Selecione la opcion\n" +
+            System.out.println("Seleccione una opcion:\n" +
                     "1. Introducir los gastos de los viajeros.\n" +
                     "2. Calcular y mostrar repartos de gastos.\n" +
                     "3. Salir.");
@@ -17,7 +17,7 @@ public class AgenciaViajes {
             switch (opcionprograma) {
                 case 1: {  //Introduce el código aqui Jesus.
                     System.out.println("Ingrese los gastos de los viajeros (si no tienen gastos ingresear un -1)");
-                    System.out.println("Gastos del primero viajero.");
+                    System.out.println("Gastos del primer viajero.");
                     numeroViajeros =5;
                     int viajero = escaner.nextInt();
                     System.out.println("Gastos del segundo viajero.");
