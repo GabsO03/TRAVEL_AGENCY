@@ -6,7 +6,7 @@ public class AgenciaViajes {
     public static void main(String[] args) {
         Scanner escaner = new Scanner(System.in);
         int opcionprograma,opcionViajero, numeroViajeros = 5, viajero1 = 0, viajero2 = 0, viajero3 = 0, viajero4 = 0, viajero5 = 0;
-        float gastosViajeros = 0, gastoTotal = 0, reparto = 0; //Variables para Gabi
+        float gastosViajeros, gastoTotal; //Variables para Gabi
         boolean opcionuno = false;  //booleanas para avisar que los pasos se han cumplido.
         do {
             System.out.println("Seleccione una opcion:\n" +
