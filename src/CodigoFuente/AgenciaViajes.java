@@ -26,6 +26,7 @@ public class AgenciaViajes {
     }
     public static int noVan(int x,int y){
         x = sc();
+        y =5;
         if (x == -1) {
             y--;
             x = 0;
@@ -48,31 +49,33 @@ public class AgenciaViajes {
                         switch (opcionViajero) {
                             case 1: {
                                 System.out.println("Gastos del primer viajero.");
-                                noVan(viajero1,numeroViajeros);
+                                viajero1=noVan(viajero1,numeroViajeros);
+
                                 break;
 
                             }
                             case 2: {
                                 System.out.println("Gastos del segundo viajero.");
-                                noVan(viajero2,numeroViajeros);
+                                viajero2= noVan(viajero2,numeroViajeros);
+
                                 break;
                             }
                             case 3: {
                                 System.out.println("Gastos del tercer viajero.");
-                                viajero3 = sc();
-                                noVan(viajero3,numeroViajeros);
+                                viajero3 = noVan(viajero3,numeroViajeros);
+
                                 break;
                             }
                             case 4: {
                                 System.out.println("Gastos del cuarto viajero");
-                                viajero4 =sc();
-                                noVan(viajero4,numeroViajeros);
+                                viajero4 = noVan(viajero4,numeroViajeros);
+
                                 break;
                             }
                             case 5: {
                                 System.out.println("Gastos del quinto viajero");
-                                viajero5 = sc();
-                                noVan(viajero5,numeroViajeros);
+                                viajero5 = noVan(viajero5,numeroViajeros);
+
                                 break;
                             }
                             case 6: {
@@ -83,9 +86,11 @@ public class AgenciaViajes {
                                 System.out.println("ERROR: opción no disponible.");
 
 
+
                         }
                     } while (opcionViajero != 6);
                     opcionuno = true;
+                    break;
                 }
 
 
