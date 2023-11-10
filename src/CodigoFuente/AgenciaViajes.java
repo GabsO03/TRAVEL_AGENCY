@@ -5,10 +5,7 @@ import java.util.Scanner;
 
 
 public class AgenciaViajes {
-    //Función para calcular el total y la media
-    public static float sumaViajeros (float v1, float v2, float v3, float v4, float v5) {
-        return v1 + v2 + v3 + v4 + v5;
-    }
+    //Función para mostrar el resultado de cada uno
     public static void resultadoViajero (String orden, float viajero, float mediaViajeros) {
         if (viajero < mediaViajeros) System.out.printf("El %s viajero pagó %.2f, debe pagar %.2f.\n", orden, viajero, (mediaViajeros - viajero));
         else System.out.printf("El %s viajero pagó %.2f deben pagarle %.2f.\n", orden, viajero, (viajero - mediaViajeros));
@@ -104,7 +101,7 @@ public class AgenciaViajes {
                 case 2: {
                             if (opcionuno) {
                             System.out.println();
-                            gastoTotal = sumaViajeros(viajero1, viajero2, viajero3, viajero4, viajero5);
+                            gastoTotal = viajero1 + viajero2 + viajero3 + viajero4 + viajero5;
                             gastosViajeros = gastoTotal/numeroViajeros;
                             System.out.printf("Han gastado %.2f en total. Con una media de %.2f.\n", gastoTotal,gastosViajeros);
 
