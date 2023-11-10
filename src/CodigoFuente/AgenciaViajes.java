@@ -28,7 +28,7 @@ public class AgenciaViajes {
         switch (opcionViajero) {
             case 1: {
                 System.out.println("Gastos del primer viajero.");
-                viajero1 = Integer.parseInt(escaner.nextLine());
+                viajero1 = sc();
                 if (viajero1 == -1) {
                     numeroViajeros--;
                     viajero1 = 0;
@@ -38,7 +38,7 @@ public class AgenciaViajes {
             }
             case 2: {
                 System.out.println("Gastos del segundo viajero.");
-                viajero2 = Integer.parseInt(escaner.nextLine());
+                viajero2 = sc();
                 if (viajero2 == -1) {
                     numeroViajeros--;
                     viajero2 = 0;
@@ -47,7 +47,7 @@ public class AgenciaViajes {
             }
             case 3: {
                 System.out.println("Gastos del tercer viajero.");
-                viajero3 = Integer.parseInt(escaner.nextLine());
+                viajero3 = sc();
                 if (viajero3 == -1) {
                     numeroViajeros--;
                     viajero3 = 0;
@@ -56,7 +56,7 @@ public class AgenciaViajes {
             }
             case 4: {
                 System.out.println("Gastos del cuarto viajero");
-                viajero4 = Integer.parseInt(escaner.nextLine());
+                viajero4 =sc();
                 if (viajero4 == -1) {
                     numeroViajeros--;
                     viajero4 = 0;
@@ -65,7 +65,7 @@ public class AgenciaViajes {
             }
             case 5: {
                 System.out.println("Gastos del quinto viajero");
-                viajero5 = Integer.parseInt(escaner.nextLine());
+                viajero5 = sc();
                 if (viajero5 == -1) {
                     numeroViajeros--;
                     viajero5 = 0;
@@ -74,15 +74,20 @@ public class AgenciaViajes {
             }
             case 6: {
                 System.out.println("Gastos viajeros guardados");
+                break;
             }
             default:
                 System.out.println("ERROR: opción no disponible.");
 
 
-                opcionuno = true;
         }
 
 
+    }
+    public static int sc(){
+        Scanner escaner = new Scanner(System.in);
+        int opcion= Integer.parseInt(escaner.nextLine());
+        return opcion;
     }
 
     public static void main(String[] args) {
@@ -92,7 +97,7 @@ public class AgenciaViajes {
         boolean opcionuno = false;  //booleanas para avisar que los pasos se han cumplido.
         do {
             menuPrincipal();
-            opcionprograma = Integer.parseInt(escaner.nextLine());
+            opcionprograma = sc();
             switch (opcionprograma) {
                 case 1: {  //Introduce el código aqui Jesus.
                     do {
@@ -101,10 +106,10 @@ public class AgenciaViajes {
 
 
 
-                        opcionViajero = Integer.parseInt(escaner.nextLine());
+                        opcionViajero = sc();
                         opcion1(opcionViajero);
-                        break;
                     } while (opcionViajero != 6);
+                    opcionuno = true;
                 }
 
 
