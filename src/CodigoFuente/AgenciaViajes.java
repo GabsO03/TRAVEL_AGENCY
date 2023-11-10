@@ -3,16 +3,19 @@ package CodigoFuente;
 import java.util.Scanner;
 
 public class AgenciaViajes {
+    public static void menuPrincipal(){
+        System.out.println("Seleccione una opcion:\n" +
+                "1. Introducir los gastos de los viajeros.\n" +
+                "2. Calcular y mostrar repartos de gastos.\n" +
+                "3. Salir.");
+    }
     public static void main(String[] args) {
         Scanner escaner = new Scanner(System.in);
         int opcionprograma,opcionViajero, numeroViajeros = 5, viajero1 = 0, viajero2 = 0, viajero3 = 0, viajero4 = 0, viajero5 = 0;
         float gastosViajeros, gastoTotal; //Variables para Gabi
         boolean opcionuno = false;  //booleanas para avisar que los pasos se han cumplido.
         do {
-            System.out.println("Seleccione una opcion:\n" +
-                    "1. Introducir los gastos de los viajeros.\n" +
-                    "2. Calcular y mostrar repartos de gastos.\n" +
-                    "3. Salir.");
+            menuPrincipal();
             opcionprograma = Integer.parseInt(escaner.nextLine());
             switch (opcionprograma) {
                 case 1: {  //Introduce el código aqui Jesus.
