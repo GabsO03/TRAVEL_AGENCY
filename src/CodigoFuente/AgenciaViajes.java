@@ -82,9 +82,9 @@ public class AgenciaViajes {
 
         } }
     public static int sc(){
-     Scanner sc = new Scanner(System.in);
-     int opcion = Integer.parseInt(sc.nextLine());
-     return opcion;
+        Scanner sc = new Scanner(System.in);
+        int opcion = Integer.parseInt(sc.nextLine());
+        return opcion;
     }
 
     public static void main(String[] args) {
