@@ -18,27 +18,27 @@ public class AgenciaViajes {
                 "5.Quinto viajero \n" +
                 "6.Salir");
     }
-    public static void resultadoViajero (String orden, float viajero, float mediaViajeros) {
-        if (viajero < mediaViajeros) System.out.printf("El %s viajero pagó %.2f, debe pagar %.2f.\n", orden, viajero, (mediaViajeros - viajero));
-        else System.out.printf("El %s viajero pagó %.2f deben pagarle %.2f.\n", orden, viajero, (viajero - mediaViajeros));
-    }
 
 
     public static void opcion1(int opcionViajero) {
         int viajero1 = 0, viajero2 = 0, viajero3 = 0, viajero4 = 0, viajero5 = 0, numeroViajeros = 5;
+        boolean opcionuno = false;
+
+
         switch (opcionViajero) {
             case 1: {
                 System.out.println("Gastos del primer viajero.");
-                viajero1 = sc();
+                viajero1 = Integer.parseInt(escaner.nextLine());
                 if (viajero1 == -1) {
                     numeroViajeros--;
                     viajero1 = 0;
                 }
                 break;
+
             }
             case 2: {
                 System.out.println("Gastos del segundo viajero.");
-                viajero2 = sc();
+                viajero2 = Integer.parseInt(escaner.nextLine());
                 if (viajero2 == -1) {
                     numeroViajeros--;
                     viajero2 = 0;
@@ -47,7 +47,7 @@ public class AgenciaViajes {
             }
             case 3: {
                 System.out.println("Gastos del tercer viajero.");
-                viajero3 = sc();
+                viajero3 = Integer.parseInt(escaner.nextLine());
                 if (viajero3 == -1) {
                     numeroViajeros--;
                     viajero3 = 0;
@@ -56,7 +56,7 @@ public class AgenciaViajes {
             }
             case 4: {
                 System.out.println("Gastos del cuarto viajero");
-                viajero4 = sc();
+                viajero4 = Integer.parseInt(escaner.nextLine());
                 if (viajero4 == -1) {
                     numeroViajeros--;
                     viajero4 = 0;
@@ -65,7 +65,7 @@ public class AgenciaViajes {
             }
             case 5: {
                 System.out.println("Gastos del quinto viajero");
-                viajero5 = sc();
+                viajero5 = Integer.parseInt(escaner.nextLine());
                 if (viajero5 == -1) {
                     numeroViajeros--;
                     viajero5 = 0;
@@ -74,17 +74,15 @@ public class AgenciaViajes {
             }
             case 6: {
                 System.out.println("Gastos viajeros guardados");
-                break;
             }
             default:
                 System.out.println("ERROR: opción no disponible.");
 
 
-        } }
-    public static int sc(){
-        Scanner sc = new Scanner(System.in);
-        int opcion = Integer.parseInt(sc.nextLine());
-        return opcion;
+                opcionuno = true;
+        }
+
+
     }
 
     public static void main(String[] args) {
@@ -94,41 +92,67 @@ public class AgenciaViajes {
         boolean opcionuno = false;  //booleanas para avisar que los pasos se han cumplido.
         do {
             menuPrincipal();
-            opcionprograma = sc();
+            opcionprograma = Integer.parseInt(escaner.nextLine());
             switch (opcionprograma) {
                 case 1: {  //Introduce el código aqui Jesus.
                     do {
-                        preciosViajeros();
-                        opcionViajero =sc();
+
+                   preciosViajeros();
+
+
+
+                        opcionViajero = Integer.parseInt(escaner.nextLine());
                         opcion1(opcionViajero);
-                    } while (opcionViajero != 6);
-                    opcionuno = true;
-                }
-
-
-                case 2: {
-                    if (opcionuno) {
-                        System.out.println();
-
-                        gastoTotal = viajero1 + viajero2 + viajero3 + viajero4 + viajero5;
-                        gastosViajeros = gastoTotal/numeroViajeros;
-                        System.out.printf("Han gastado %.2f en total. Con una media de %.2f.\n", gastoTotal,gastosViajeros);
-
-                        resultadoViajero("primer", viajero1, gastosViajeros);
-                        resultadoViajero("segundo", viajero2, gastosViajeros);
-                        if (numeroViajeros>2) resultadoViajero("tercer", viajero3, gastosViajeros);
-                        if (numeroViajeros>3) resultadoViajero("cuarto", viajero4, gastosViajeros);
-                        if (numeroViajeros>4) resultadoViajero("quinto", viajero5, gastosViajeros);
                         break;
+                    } while (opcionViajero != 6);
+                }
 
-                    } else System.out.println ("No has completado la opción 1");
-                    break;
+
+                    case 2: {
+                        if (opcionuno) {
+                            System.out.println();
+
+                            gastosViajeros = (float) (viajero1 + viajero2 + viajero3 + viajero4 + viajero5) / numeroViajeros;
+                            gastoTotal = viajero1 + viajero2 + viajero3 + viajero4 + viajero5;
+                            System.out.println ("Han gastado " + gastoTotal + " en total. Con una media de "+gastosViajeros);
+
+                            if (viajero1 < gastosViajeros) System.out.println("El primer viajero pagó "+viajero1+" debe pagar " + (gastosViajeros - viajero1));
+                            else System.out.println ("El primer viajero pagó "+viajero1+" deben pagarle " + (viajero1 - gastosViajeros));
+
+                            if (viajero2 < gastosViajeros) System.out.println("El segundo viajero pagó "+viajero2+" debe pagar " + (gastosViajeros - viajero2));
+                            else System.out.println ("El segundo viajero pagó "+viajero2+" deben pagarle " + (viajero2 - gastosViajeros));
+
+                            if (numeroViajeros>2) {
+                                if (viajero3 < gastosViajeros)
+                                    System.out.println("El tercer viajero pagó "+viajero3+" debe pagar " + (gastosViajeros - viajero3));
+                                else
+                                    System.out.println("El tercer viajero pagó "+viajero3+" deben pagarle " + (viajero3 - gastosViajeros));
+                            }
+
+                            if (numeroViajeros>3){
+                                if (viajero4 < gastosViajeros)
+                                    System.out.println("El cuarto viajero pagó "+viajero4+" debe pagar " + (gastosViajeros - viajero4));
+                                else
+                                    System.out.println("El cuarto viajero pagó "+viajero4+" deben pagarle " + (viajero4 - gastosViajeros));
+                            }
+
+                            if (numeroViajeros>4){
+                                if (viajero5 < gastosViajeros)
+                                    System.out.println("El quinto viajero pagó "+viajero5+" debe pagar " + (gastosViajeros - viajero5));
+                                else
+                                    System.out.println("El quinto viajero pagó "+viajero5+" deben pagarle " + (viajero5 - gastosViajeros));
+                            }
+
+                        } else System.out.println ("No has completado la opción 1");
+                        break;
+                    }
+                    case 3: {
+                        System.out.println("Gracias por contar con nuestro equipo.");
+                    }
+                    default: System.out.println("Has salido del programa");
                 }
-                case 3: {
-                    System.out.println("Gracias por contar con nuestro equipo.");
-                }
-                default: System.out.println("Has salido del programa");
-            }
-        } while (opcionprograma != 3) ;
+            } while (opcionprograma != 3) ;
+        }
     }
-}
+
+
