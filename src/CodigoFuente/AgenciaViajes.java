@@ -9,6 +9,82 @@ public class AgenciaViajes {
                 "2. Calcular y mostrar repartos de gastos.\n" +
                 "3. Salir.");
     }
+    public static void  preciosViajeros(){
+        System.out.println("Introduce el viajero que quiere introducir gastos o 6 para salir;\n" +
+                "1.Primer viajero \n" +
+                "2.Segundo viajero \n" +
+                "3.Tercer viajero \n" +
+                "4.Cuarto viajero \n" +
+                "5.Quinto viajero \n" +
+                "6.Salir");
+    }
+
+
+    public static void opcion1(int opcionViajero) {
+        int viajero1 = 0, viajero2 = 0, viajero3 = 0, viajero4 = 0, viajero5 = 0, numeroViajeros = 5;
+        boolean opcionuno = false;
+
+
+        switch (opcionViajero) {
+            case 1: {
+                System.out.println("Gastos del primer viajero.");
+                viajero1 = Integer.parseInt(escaner.nextLine());
+                if (viajero1 == -1) {
+                    numeroViajeros--;
+                    viajero1 = 0;
+                }
+                break;
+
+            }
+            case 2: {
+                System.out.println("Gastos del segundo viajero.");
+                viajero2 = Integer.parseInt(escaner.nextLine());
+                if (viajero2 == -1) {
+                    numeroViajeros--;
+                    viajero2 = 0;
+                }
+                break;
+            }
+            case 3: {
+                System.out.println("Gastos del tercer viajero.");
+                viajero3 = Integer.parseInt(escaner.nextLine());
+                if (viajero3 == -1) {
+                    numeroViajeros--;
+                    viajero3 = 0;
+                }
+                break;
+            }
+            case 4: {
+                System.out.println("Gastos del cuarto viajero");
+                viajero4 = Integer.parseInt(escaner.nextLine());
+                if (viajero4 == -1) {
+                    numeroViajeros--;
+                    viajero4 = 0;
+                }
+                break;
+            }
+            case 5: {
+                System.out.println("Gastos del quinto viajero");
+                viajero5 = Integer.parseInt(escaner.nextLine());
+                if (viajero5 == -1) {
+                    numeroViajeros--;
+                    viajero5 = 0;
+                }
+                break;
+            }
+            case 6: {
+                System.out.println("Gastos viajeros guardados");
+            }
+            default:
+                System.out.println("ERROR: opción no disponible.");
+
+
+                opcionuno = true;
+        }
+
+
+    }
+
     public static void main(String[] args) {
         Scanner escaner = new Scanner(System.in);
         int opcionprograma,opcionViajero, numeroViajeros = 5, viajero1 = 0, viajero2 = 0, viajero3 = 0, viajero4 = 0, viajero5 = 0;
@@ -21,74 +97,17 @@ public class AgenciaViajes {
                 case 1: {  //Introduce el código aqui Jesus.
                     do {
 
-                        System.out.println("Introduce el viajero que quiere introducir gastos o 6 para salir;\n" +
-                                "1.Primer viajero \n" +
-                                "2.Segundo viajero \n" +
-                                "3.Tercer viajero \n" +
-                                "4.Cuarto viajero \n" +
-                                "5.Quinto viajero \n" +
-                                "6.Salir");
+                   preciosViajeros();
+
 
 
                         opcionViajero = Integer.parseInt(escaner.nextLine());
-                        switch (opcionViajero) {
-                            case 1: {
-                                System.out.println("Gastos del primer viajero.");
-                                viajero1 = Integer.parseInt(escaner.nextLine());
-                                if (viajero1 == -1) {
-                                    numeroViajeros--;
-                                    viajero1 = 0;
-                                }
-                                break;
-
-                            }
-                            case 2: {
-                                System.out.println("Gastos del segundo viajero.");
-                                viajero2 = Integer.parseInt(escaner.nextLine());
-                                if (viajero2 == -1) {
-                                    numeroViajeros--;
-                                    viajero2 = 0;
-                                }
-                                break;
-                            }
-                            case 3: {
-                                System.out.println("Gastos del tercer viajero.");
-                                viajero3 = Integer.parseInt(escaner.nextLine());
-                                if (viajero3 == -1) {
-                                    numeroViajeros--;
-                                    viajero3 = 0;
-                                }
-                                break;
-                            }
-                            case 4: {
-                                System.out.println("Gastos del cuarto viajero");
-                                viajero4 = Integer.parseInt(escaner.nextLine());
-                                if (viajero4 == -1) {
-                                    numeroViajeros--;
-                                    viajero4 = 0;
-                                }
-                                break;
-                            }
-                            case 5: {
-                                System.out.println("Gastos del quinto viajero");
-                                viajero5 = Integer.parseInt(escaner.nextLine());
-                                if (viajero5 == -1) {
-                                    numeroViajeros--;
-                                    viajero5 = 0;
-                                }
-                                break;
-                            }
-                            case 6: {
-                                System.out.println("Gastos viajeros guardados");
-                            }
-                            default:
-                                System.out.println("ERROR: opción no disponible.");
-
-
-                            opcionuno = true;
-                        }
+                        opcion1(opcionViajero);
+                        break;
                     } while (opcionViajero != 6);
                 }
+
+
                     case 2: {
                         if (opcionuno) {
                             System.out.println();
