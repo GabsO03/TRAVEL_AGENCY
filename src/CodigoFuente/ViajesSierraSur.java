@@ -53,13 +53,13 @@ public class ViajesSierraSur {
 
     public static void main (String[] args) {
         int opcionprograma,opcionViajero, numeroViajeros = 5;
-        float gastosViajeros, gastoTotal = 0, viajero1 = 0, viajero2 = 0, viajero3 = 0, viajero4 = 0, viajero5 = 0; //Variables para Gabi
-        boolean opcionuno = false;  //booleanas para avisar que los pasos se han cumplido.
+        float gastosViajeros, gastoTotal = 0, viajero1 = 0, viajero2 = 0, viajero3 = 0, viajero4 = 0, viajero5 = 0;
+        boolean opcionuno = false;
         do {
             menuPrincipal();
             opcionprograma = sc();
             switch (opcionprograma) {
-                case 1: {  //Introduce el código aqui Jesus.
+                case 1: {
                     do {
 
                    preciosViajeros();
