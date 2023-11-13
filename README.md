@@ -1,4 +1,4 @@
-# TRAVEL AGENCY
+# Viajes Sierra Sur
 
 Es un software desarrollado para repartir el coste de un viaje entre un número determinado de personas. 
 
